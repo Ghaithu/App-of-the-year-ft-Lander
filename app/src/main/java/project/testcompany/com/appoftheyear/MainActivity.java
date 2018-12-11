@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OpenMainMenu(){
-        /*Intent intent = new Intent(this, mainmenu.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(this, menu.class);
+        startActivity(intent);
 
     }
 }
