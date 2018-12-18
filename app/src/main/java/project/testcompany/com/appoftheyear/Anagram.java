@@ -23,4 +23,12 @@ public class Anagram {
         }
         return anagramwoord;
     }
+
+    public boolean CheckAnagram(){
+        boolean isCorrect = false;
+        if (this.woord == this.anagramwoord){
+            isCorrect = true;
+        }
+        return isCorrect;
+    }
 }
