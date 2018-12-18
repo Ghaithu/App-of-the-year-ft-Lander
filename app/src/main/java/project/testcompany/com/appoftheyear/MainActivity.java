@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn;
+    private Anagram anag = new Anagram("test");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 OpenMainMenu();
             }
         });
+
     }
 
     public void OpenMainMenu(){

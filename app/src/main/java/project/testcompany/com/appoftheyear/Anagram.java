@@ -6,9 +6,8 @@ public class Anagram {
     private String woord;
     private String anagramwoord;
 
-    public Anagram(String woord, String anagramwoord) {
+    public Anagram(String woord) {
         this.woord = woord;
-        this.anagramwoord = anagramwoord;
     }
 
     public String getWoord() { return woord; }
