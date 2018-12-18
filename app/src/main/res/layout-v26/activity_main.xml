@@ -25,9 +25,9 @@
     android:ems="10"
     android:importantForAutofill="no"
     android:inputType="textPersonName"
-    android:text="Age"
+    android:text="@string/ageVal"
     tools:layout_editor_absoluteX="85dp"
-    tools:layout_editor_absoluteY="153dp" tools:targetApi="o" />
+    tools:layout_editor_absoluteY="153dp" />
 
   <EditText
     android:id="@+id/editText2"
@@ -43,10 +43,10 @@
     android:ems="10"
     android:importantForAutofill="no"
     android:inputType="textPersonName"
-    android:text="@string/nameVal"
+    android:text="Name"
     tools:layout_editor_absoluteX="85dp"
     tools:layout_editor_absoluteY="153dp"
-    tools:text="Name" tools:targetApi="o" />
+    tools:text="Name" />
 
   <Button
     android:id="@+id/start"
