@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".menu"></activity>
+        <activity android:name=".menu" />
+        <activity android:name=".ChooseGame" />
+        <activity android:name=".ChooseMode"></activity>
     </application>
 
 </manifest>

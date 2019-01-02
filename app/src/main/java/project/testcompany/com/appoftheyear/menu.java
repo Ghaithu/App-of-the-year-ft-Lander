@@ -12,16 +12,38 @@ public class menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainmenu);
-        //PlayGame();
+        PlayGame();
+        ChooseMode();
+        ChooseGame();
     }
-    /*public void PlayGame(){
-        Button startButton = findViewById(R.id.start);
+    public void PlayGame(){
+        Button startButton = findViewById(R.id.play);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, menu.class));
+                startActivity(new Intent(menu.this, menu.class));
             }
         });
-    }*/
+    }
+
+    public void ChooseMode(){
+        Button startButton = findViewById(R.id.mode);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(menu.this, ChooseGame.class));
+            }
+        });
+    }
+
+    public void ChooseGame(){
+        Button startButton = findViewById(R.id.game);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(menu.this, ChooseMode.class));
+            }
+        });
+    }
 }
 
