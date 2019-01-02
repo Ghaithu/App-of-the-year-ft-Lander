@@ -13,18 +13,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn = findViewById(R.id.start);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OpenMainMenu();
-            }
-        });
+
+        StartGame();
     }
 
-    public void OpenMainMenu(){
-        Intent intent = new Intent(this, menu.class);
-        startActivity(intent);
-
+    public void StartGame(){
+        Button startButton = findViewById(R.id.start);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, menu.class));
+            }
+        });
     }
 }
