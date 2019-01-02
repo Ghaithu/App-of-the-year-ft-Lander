@@ -9,15 +9,16 @@
 
   <EditText
     android:id="@+id/ageInput"
+    android:labelFor= "@+id/start"
     android:layout_width="183dp"
     android:layout_height="62dp"
     android:layout_below="@+id/editText2"
     android:layout_alignParentStart="true"
-    android:layout_alignParentLeft="true"
+
     android:layout_alignParentEnd="true"
     android:layout_alignParentBottom="true"
     android:layout_marginStart="107dp"
-    android:layout_marginLeft="107dp"
+
     android:layout_marginTop="62dp"
     android:layout_marginEnd="94dp"
     android:layout_marginBottom="218dp"
@@ -31,19 +32,18 @@
 
   <EditText
     android:id="@+id/editText2"
+    android:labelFor= "@+id/start"
     android:layout_width="183dp"
     android:layout_height="62dp"
     android:layout_alignParentStart="true"
-    android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginStart="101dp"
-    android:layout_marginLeft="101dp"
     android:layout_marginTop="163dp"
     android:background="@android:color/darker_gray"
     android:ems="10"
     android:importantForAutofill="no"
     android:inputType="textPersonName"
-    android:text="Name"
+    android:text="@string/fillName"
     tools:layout_editor_absoluteX="85dp"
     tools:layout_editor_absoluteY="153dp"
     tools:text="Name" />
@@ -70,7 +70,7 @@
     android:layout_alignParentTop="true"
     android:layout_marginStart="34dp"
     android:layout_marginTop="21dp"
-    android:text="Random Name"
+    android:text="@string/appTitle"
     android:textAppearance="@style/TextAppearance.AppCompat.Title"
     android:textColor="@android:color/black"
     android:textColorHighlight="@android:color/white"
