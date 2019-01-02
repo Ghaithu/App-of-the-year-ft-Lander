@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".menu" />
         <activity android:name=".ChooseGame" />
-        <activity android:name=".ChooseMode"></activity>
+        <activity android:name=".ChooseMode" />
+        <activity android:name=".ChooseHangman" />
+        <activity android:name=".ChooseWordguess" />
+        <activity android:name=".ChooseAnagram" />
     </application>
 
 </manifest>

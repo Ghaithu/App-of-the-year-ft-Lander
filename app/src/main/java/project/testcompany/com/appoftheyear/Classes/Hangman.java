@@ -1,4 +1,4 @@
-package project.testcompany.com.appoftheyear;
+package project.testcompany.com.appoftheyear.Classes;
 
 import java.util.Random;
 
