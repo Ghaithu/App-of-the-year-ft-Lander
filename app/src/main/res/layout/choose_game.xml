@@ -4,28 +4,28 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/gameoption1"
+        android:id="@+id/optionRunescape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"
-        android:text="Button" />
+        android:text="Runescape" />
 
     <Button
-        android:id="@+id/gameoption2"
+        android:id="@+id/optionOverwatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/gameoption1"
+        android:layout_alignTop="@+id/optionRunescape"
         android:layout_marginStart="117dp"
-        android:text="Button" />
+        android:text="Overwatch" />
 
     <Button
-        android:id="@+id/gameoption3"
+        android:id="@+id/OptionCsgo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/gameoption1"
+        android:layout_alignTop="@+id/optionRunescape"
         android:layout_marginEnd="57dp"
-        android:text="Button" />
+        android:text="Csgo" />
 </RelativeLayout>
