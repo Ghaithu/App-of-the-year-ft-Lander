@@ -11,7 +11,7 @@ public class menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.mainmenu);
         //PlayGame();
     }
     /*public void PlayGame(){
