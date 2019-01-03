@@ -9,7 +9,7 @@ import android.widget.Button;
 public class menu extends AppCompatActivity {
 
 
-    private String data = "menu";
+    private String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
