@@ -3,7 +3,9 @@
     <string name="btnStart">start</string>
     <string name="ageVal">Age</string>
     <string name="nameVal">Name</string>
-  <string name="appName">Random Name</string>
+  <string name="appName">Zalirin</string>
   <string name="fillName">Name</string>
   <string name="appTitle">Random Name</string>
+  <string name="hintName">Name</string>
+  <string name="hintAge">Age</string>
 </resources>

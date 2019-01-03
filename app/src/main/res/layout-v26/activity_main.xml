@@ -4,79 +4,68 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:background="@drawable/page1"
+  android:background="@drawable/page1"
   tools:context=".MainActivity">
 
   <EditText
-    android:id="@+id/ageInput"
-    android:labelFor= "@+id/start"
-    android:layout_width="183dp"
-    android:layout_height="62dp"
-    android:layout_below="@+id/editText2"
-    android:layout_alignParentStart="true"
-
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginStart="107dp"
-
-    android:layout_marginTop="62dp"
-    android:layout_marginEnd="94dp"
-    android:layout_marginBottom="218dp"
+    android:layout_below="@id/textView"
+    android:layout_centerHorizontal="true"
+    android:layout_width="170dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/nameInput"
     android:background="@android:color/darker_gray"
     android:ems="10"
+    android:hint="@string/hintName"
     android:importantForAutofill="no"
     android:inputType="textPersonName"
-    android:text="@string/ageVal"
-    tools:layout_editor_absoluteX="85dp"
-    tools:layout_editor_absoluteY="153dp" />
-
-  <EditText
-    android:id="@+id/editText2"
-    android:labelFor= "@+id/start"
-    android:layout_width="183dp"
-    android:layout_height="62dp"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginStart="101dp"
-    android:layout_marginTop="163dp"
-    android:background="@android:color/darker_gray"
-    android:ems="10"
-    android:importantForAutofill="no"
-    android:inputType="textPersonName"
-    android:text="@string/fillName"
-    tools:layout_editor_absoluteX="85dp"
-    tools:layout_editor_absoluteY="153dp"
-    tools:text="Name" />
-
-  <Button
-    android:id="@+id/start"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginStart="153dp"
-    android:layout_marginTop="384dp"
-    android:layout_marginEnd="143dp"
-    android:layout_marginBottom="135dp"
-    android:text="@string/btnStart" />
+    android:labelFor="@+id/start"
+ />
 
   <TextView
     android:id="@+id/textView"
-    android:layout_width="350dp"
-    android:layout_height="150dp"
+    android:layout_width="353dp"
+    android:layout_height="125dp"
     android:layout_alignParentStart="true"
     android:layout_alignParentTop="true"
-    android:layout_marginStart="34dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="21dp"
     android:layout_marginTop="21dp"
-    android:text="@string/appTitle"
+    android:lineSpacingExtra="10sp"
+    android:text="@string/appName"
+    android:textAlignment="center"
     android:textAppearance="@style/TextAppearance.AppCompat.Title"
     android:textColor="@android:color/black"
     android:textColorHighlight="@android:color/white"
     android:textColorHint="@android:color/white"
     android:textColorLink="@android:color/black"
     android:textSize="50sp" />
+
+  <EditText
+    android:id="@+id/ageInput"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/nameInput"
+    android:layout_height="50dp"
+    android:layout_width="170dp"
+    android:layout_marginTop="20dp"
+    android:autofillHints=""
+    android:background="@android:color/darker_gray"
+    android:ems="10"
+    android:hint="@string/hintAge"
+
+    android:inputType="number" />
+
+  <Button
+    android:id="@+id/start"
+    android:layout_below="@id/ageInput"
+    android:layout_centerHorizontal="true"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="45dp"
+    android:background="@android:color/holo_purple"
+    android:text="@string/btnStart"
+
+    />
 
 
 </RelativeLayout>
