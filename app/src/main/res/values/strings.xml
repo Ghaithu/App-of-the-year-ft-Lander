@@ -8,4 +8,6 @@
   <string name="appTitle">Random Name</string>
   <string name="hintName">Name</string>
   <string name="hintAge">Age</string>
+  <string name="playBtn">Play</string>
+  <string name="chGame">Choose Game</string>
 </resources>
