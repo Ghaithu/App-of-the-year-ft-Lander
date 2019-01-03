@@ -18,9 +18,9 @@ public class menu extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            String data = bundle.getString("Game");
+            String data = bundle.getString("Mode");
         }
-        
+
         PlayGame(data);
         ChooseMode(data);
         ChooseGame(data);

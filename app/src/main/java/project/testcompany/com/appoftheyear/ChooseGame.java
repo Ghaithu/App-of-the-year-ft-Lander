@@ -12,37 +12,40 @@ public class ChooseGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_game);
+        PlayRunescape();
+        PlayCsgo();
+        PlayOverwatch();
     }
 
-    public void PlayAnagram(){
-        Button startButton = findViewById(R.id.optionAnagram);
+    public void PlayRunescape(){
+        Button startButton = findViewById(R.id.optionRunescape);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseGame.this, menu.class));
-                //getIntent().putExtra("Game", "anagram");
+                getIntent().putExtra("Game", "runescape");
             }
         });
     }
 
-    public void PlayWordguess(){
-        Button startButton = findViewById(R.id.optionAnagram);
+    public void PlayOverwatch(){
+        Button startButton = findViewById(R.id.optionOverwatch);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseGame.this, menu.class));
-                //getIntent().putExtra("Game", "wordguess");
+                getIntent().putExtra("Game", "overwatch");
             }
         });
     }
 
-    public void PlayHangman(){
-        Button startButton = findViewById(R.id.optionAnagram);
+    public void PlayCsgo(){
+        Button startButton = findViewById(R.id.optionCsgo);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseGame.this, menu.class));
-                //getIntent().putExtra("Game", "hangman");
+                getIntent().putExtra("Game", "csgo");
             }
         });
     }

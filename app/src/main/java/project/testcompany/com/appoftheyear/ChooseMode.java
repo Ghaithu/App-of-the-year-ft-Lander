@@ -23,26 +23,29 @@ public class ChooseMode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseMode.this, menu.class));
+                getIntent().putExtra("Mode", "anagram");
             }
         });
     }
 
     public void PlayWordguess(){
-        Button startButton = findViewById(R.id.optionAnagram);
+        Button startButton = findViewById(R.id.optionWordguess);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseMode.this, menu.class));
+                getIntent().putExtra("Mode", "wordguess");
             }
         });
     }
 
     public void PlayHangman(){
-        Button startButton = findViewById(R.id.optionAnagram);
+        Button startButton = findViewById(R.id.optionHangman);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseMode.this, menu.class));
+                getIntent().putExtra("Mode", "hangman");
             }
         });
     }

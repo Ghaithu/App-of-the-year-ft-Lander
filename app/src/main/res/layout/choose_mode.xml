@@ -16,16 +16,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/gameoption1"
+        android:layout_alignTop="@+id/optionAnagram"
         android:layout_marginStart="117dp"
         android:text="Word Guess" />
 
     <Button
-        android:id="@+id/OptionHangman"
+        android:id="@+id/optionHangman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/gameoption1"
+        android:layout_alignTop="@+id/optionAnagram"
         android:layout_marginEnd="57dp"
         android:text="Hangman" />
 
