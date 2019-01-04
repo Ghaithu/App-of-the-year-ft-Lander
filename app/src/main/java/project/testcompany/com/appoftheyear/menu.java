@@ -36,13 +36,13 @@ public class menu extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mode == "anagram"){
+                if(mode.equals("anagram")){
                     startActivity(new Intent(menu.this, ChooseAnagram.class));
                 }
-                if(mode == "wordguess"){
+                if(mode.equals("wordguess")){
                     startActivity(new Intent(menu.this, ChooseWordguess.class));
                 }
-                if(mode == "hangman"){
+                if(mode.equals("hangman")){
                     startActivity(new Intent(menu.this, ChooseHangman.class));
                 }
             }
