@@ -2,8 +2,11 @@ package project.testcompany.com.appoftheyear;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -30,15 +33,29 @@ public class ChooseAnagram extends AppCompatActivity {
 
         if(gametype.equals("runescape")){
             anagram = new Anagram(wordlist.GetRunescape(random));
-            anagrambox.setText(anagram.getAnagramwoord());
         }
         if(gametype.equals("overwatch")){
             anagram = new Anagram(wordlist.GetOverwatch(random));
-            anagrambox.setText(anagram.getAnagramwoord());
         }
         if(gametype.equals("csgo")){
             anagram = new Anagram(wordlist.GetCsgo(random));
-            anagrambox.setText(anagram.getAnagramwoord());
         }
+        anagrambox.setText(anagram.GenerateAnagram());
+        Next();
+    }
+
+    public void Next(){
+        Button nextButton = findViewById(R.id.nextBtn);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String antwoord = anagramAnswer.getText().toString();
+                if(anagram.Check(antwoord)){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
+                }
+            }
+        });
     }
 }

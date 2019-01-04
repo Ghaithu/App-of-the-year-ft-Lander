@@ -10,23 +10,23 @@ public class Anagram {
         this.woord = woord;
     }
 
-    public String getWoord() { return woord; }
-
-    public String getAnagramwoord() {
-        return anagramwoord;
-    }
-
-    public String GenerateAnagram(){
-        for(int i = 0; i < woord.length(); i++){
-            int rand = new Random().nextInt(woord.length());
-            anagramwoord.concat(woord.substring(rand));
+    public String GenerateAnagram() {
+        if (woord != null  &&  !"".equals(woord)) {
+            char a[] = woord.toCharArray();
+            for (int i = 0; i < a.length; i++) {
+                int j = new Random().nextInt(a.length);
+                char tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+            return new String(a);
         }
-        return anagramwoord;
+        return woord;
     }
 
-    public boolean CheckAnagram(){
+    public boolean Check(String antwoord){
         boolean isCorrect = false;
-        if (this.woord == this.anagramwoord){
+        if (this.woord.equals(antwoord)){
             isCorrect = true;
         }
         return isCorrect;

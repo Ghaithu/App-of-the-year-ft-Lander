@@ -46,10 +46,10 @@ public class ChooseWordguess extends AppCompatActivity {
             wordguess = new Wordguess(wordlist.GetCsgo(random));
         }
 
-        //Next(wordguessInput.getText().toString());
+        Next(wordguessInput.getText().toString());
     }
 
-    /*public void Next(final String antwoord){
+    public void Next(final String antwoord){
         Button nextButton = findViewById(R.id.nextBtn);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,5 +61,5 @@ public class ChooseWordguess extends AppCompatActivity {
                 }
             }
         });
-    }*/
+    }
 }
