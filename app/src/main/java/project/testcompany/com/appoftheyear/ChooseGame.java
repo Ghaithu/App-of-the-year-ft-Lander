@@ -22,8 +22,10 @@ public class ChooseGame extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseGame.this, menu.class));
-                getIntent().putExtra("Game", "runescape");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "runescape");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }
@@ -33,8 +35,10 @@ public class ChooseGame extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseGame.this, menu.class));
-                getIntent().putExtra("Game", "overwatch");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "overwatch");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }
@@ -44,8 +48,10 @@ public class ChooseGame extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseGame.this, menu.class));
-                getIntent().putExtra("Game", "csgo");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "csgo");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }

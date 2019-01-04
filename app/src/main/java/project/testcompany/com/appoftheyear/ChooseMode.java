@@ -22,8 +22,10 @@ public class ChooseMode extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseMode.this, menu.class));
-                getIntent().putExtra("Mode", "anagram");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "anagram");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }
@@ -33,8 +35,10 @@ public class ChooseMode extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseMode.this, menu.class));
-                getIntent().putExtra("Mode", "wordguess");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "wordguess");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }
@@ -44,8 +48,10 @@ public class ChooseMode extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseMode.this, menu.class));
-                getIntent().putExtra("Mode", "hangman");
+                Intent intent = new Intent();
+                intent.putExtra("Mode", "hangman");
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }

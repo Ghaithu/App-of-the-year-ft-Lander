@@ -56,4 +56,23 @@
         android:layout_below="@id/game"
         android:layout_marginTop="30dp"
         android:text="Choose Mode" />
+
+  <TextView
+      android:id="@+id/SelectedGame"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginBottom="115dp"
+      android:layout_marginStart="39dp"
+      android:text="TextView" />
+
+  <TextView
+      android:id="@+id/SelectedMode"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignTop="@+id/SelectedGame"
+      android:layout_marginEnd="59dp"
+      android:text="TextView" />
 </RelativeLayout>
