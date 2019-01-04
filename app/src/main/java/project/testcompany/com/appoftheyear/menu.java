@@ -37,7 +37,9 @@ public class menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(mode.equals("anagram")){
-                    startActivity(new Intent(menu.this, ChooseAnagram.class));
+                    Intent intent = new Intent(menu.this, ChooseAnagram.class);
+                    intent.putExtra("Game", game);
+                    startActivity(intent);
                 }
                 if(mode.equals("wordguess")){
                     startActivity(new Intent(menu.this, ChooseWordguess.class));
