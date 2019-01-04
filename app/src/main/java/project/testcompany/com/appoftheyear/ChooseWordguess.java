@@ -46,14 +46,15 @@ public class ChooseWordguess extends AppCompatActivity {
             wordguess = new Wordguess(wordlist.GetCsgo(random));
         }
 
-        Next(wordguessInput.getText().toString());
+        Next();
     }
 
-    public void Next(final String antwoord){
+    public void Next(){
         Button nextButton = findViewById(R.id.nextBtn);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String antwoord = wordguessInput.getText().toString();
                 if(wordguess.Check(antwoord)){
                     Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
                 }else{
