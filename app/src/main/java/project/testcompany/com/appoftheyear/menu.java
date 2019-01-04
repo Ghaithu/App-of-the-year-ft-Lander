@@ -42,10 +42,14 @@ public class menu extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if(mode.equals("wordguess")){
-                    startActivity(new Intent(menu.this, ChooseWordguess.class));
+                    Intent intent = new Intent(menu.this, ChooseWordguess.class);
+                    intent.putExtra("Game", game);
+                    startActivity(intent);
                 }
                 if(mode.equals("hangman")){
-                    startActivity(new Intent(menu.this, ChooseHangman.class));
+                    Intent intent = new Intent(menu.this, ChooseHangman.class);
+                    intent.putExtra("Game", game);
+                    startActivity(intent);
                 }
             }
         });

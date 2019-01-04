@@ -2,6 +2,7 @@ package project.testcompany.com.appoftheyear;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -14,7 +15,7 @@ public class ChooseAnagram extends AppCompatActivity {
     private Wordlist wordlist = new Wordlist();
     private Anagram anagram;
     private TextView anagrambox;
-    private TextView anagramAnswer;
+    private EditText anagramAnswer;
     private int random = new Random().nextInt(7);
 
     @Override
@@ -28,8 +29,16 @@ public class ChooseAnagram extends AppCompatActivity {
         String gametype = getIntent().getStringExtra("Game");
 
         if(gametype.equals("runescape")){
-            anagrambox.setText(wordlist.GetRunescapeDisc(random));
+            anagram = new Anagram(wordlist.GetRunescape(random));
+            anagrambox.setText(anagram.getAnagramwoord());
         }
-
+        if(gametype.equals("overwatch")){
+            anagram = new Anagram(wordlist.GetOverwatch(random));
+            anagrambox.setText(anagram.getAnagramwoord());
+        }
+        if(gametype.equals("csgo")){
+            anagram = new Anagram(wordlist.GetCsgo(random));
+            anagrambox.setText(anagram.getAnagramwoord());
+        }
     }
 }

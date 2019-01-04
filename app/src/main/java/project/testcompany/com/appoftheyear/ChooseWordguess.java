@@ -19,8 +19,8 @@ public class ChooseWordguess extends AppCompatActivity {
 
     private Wordlist wordlist = new Wordlist();
     private Wordguess wordguess;
-    private TextView descriptionBox;
-    private EditText descriptionInput;
+    private TextView wordguessBox;
+    private EditText wordguessInput;
     private int random = new Random().nextInt(7);
 
     @Override
@@ -28,27 +28,28 @@ public class ChooseWordguess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wordguess);
 
-        descriptionBox = findViewById(R.id.descriptionBox);
-        descriptionInput = findViewById(R.id.anagramInput);
+        wordguessBox = findViewById(R.id.descriptionBox);
+        wordguessInput = findViewById(R.id.wordguessInput);
 
         String gametype = getIntent().getStringExtra("Game");
 
         if(gametype.equals("runescape")){
-            descriptionBox.setText(wordlist.GetRunescapeDisc(random));
+            wordguessBox.setText(wordlist.GetRunescapeDisc(random));
             wordguess = new Wordguess(wordlist.GetRunescape(random));
         }
         if(gametype.equals("overwatch")){
-            descriptionBox.setText(wordlist.GetOverwatchDisc(random));
+            wordguessBox.setText(wordlist.GetOverwatchDisc(random));
             wordguess = new Wordguess(wordlist.GetOverwatch(random));
         }
         if(gametype.equals("csgo")){
-            descriptionBox.setText(wordlist.GetCsgoDisc(random));
+            wordguessBox.setText(wordlist.GetCsgoDisc(random));
             wordguess = new Wordguess(wordlist.GetCsgo(random));
         }
-        Next(descriptionInput.getText().toString());
+
+        //Next(wordguessInput.getText().toString());
     }
 
-    public void Next(final String antwoord){
+    /*public void Next(final String antwoord){
         Button nextButton = findViewById(R.id.nextBtn);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +61,5 @@ public class ChooseWordguess extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 }
