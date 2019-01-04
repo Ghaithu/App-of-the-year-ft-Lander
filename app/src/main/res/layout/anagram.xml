@@ -85,6 +85,17 @@
   android:text="@string/nextAna"
   />
 
+  <TextView
+    android:id="@+id/currentGame"
+    android:layout_below="@id/anagramInput"
+    android:layout_marginHorizontal="210dp"
+    android:layout_marginTop="29dp"
+    android:layout_width="170dp"
+    android:layout_height="50dp"
+    android:text="Game: yeehaw"
+    android:textSize="21sp"
+    />
+
 
 
 
