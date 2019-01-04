@@ -23,8 +23,8 @@ public class ChooseGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("Mode", "runescape");
-                setResult(RESULT_OK, intent);
+                intent.putExtra("Game", "runescape");
+                setResult(RESULT_FIRST_USER, intent);
                 finish();
             }
         });
@@ -36,8 +36,8 @@ public class ChooseGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("Mode", "overwatch");
-                setResult(RESULT_OK, intent);
+                intent.putExtra("Game", "overwatch");
+                setResult(RESULT_FIRST_USER, intent);
                 finish();
             }
         });
@@ -49,8 +49,8 @@ public class ChooseGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("Mode", "csgo");
-                setResult(RESULT_OK, intent);
+                intent.putExtra("Game", "csgo");
+                setResult(RESULT_FIRST_USER, intent);
                 finish();
             }
         });

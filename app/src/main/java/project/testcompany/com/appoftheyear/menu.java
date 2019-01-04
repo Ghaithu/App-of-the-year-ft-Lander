@@ -12,7 +12,8 @@ import android.widget.TextView;
 public class menu extends AppCompatActivity {
 
 
-    private String da;
+    private String mode;
+    private String game;
     private TextView modetext;
     private TextView gametext;
 
@@ -24,25 +25,24 @@ public class menu extends AppCompatActivity {
         modetext = findViewById(R.id.SelectedMode);
         gametext = findViewById(R.id.SelectedGame);
 
-        PlayGame(da);
-        ChooseMode(da);
-        ChooseGame(da);
+        PlayGame(mode);
+        ChooseMode(mode);
+        ChooseGame(mode);
     }
 
     public void PlayGame(String d){
-        this.da = d;
+        this.mode = d;
         Button startButton = findViewById(R.id.play);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(da == "anagram"){
+                if(mode == "anagram"){
                     startActivity(new Intent(menu.this, ChooseAnagram.class));
                 }
-                if(da == "wordguess"){
+                if(mode == "wordguess"){
                     startActivity(new Intent(menu.this, ChooseWordguess.class));
                 }
-                if(da == "hangman"){
+                if(mode == "hangman"){
                     startActivity(new Intent(menu.this, ChooseHangman.class));
                 }
             }
@@ -75,11 +75,12 @@ public class menu extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
             if(resultCode == RESULT_OK){
-                da = data.getStringExtra("Mode");
-                modetext.setText("" + da);
+                mode = data.getStringExtra("Mode");
+                modetext.setText("" + mode);
             }
-            if (resultCode == RESULT_CANCELED) {
-                //Write your code if there's no result
+            if (resultCode == RESULT_FIRST_USER) {
+                game = data.getStringExtra("Game");
+                gametext.setText("" + game);
             }
         }
     }
