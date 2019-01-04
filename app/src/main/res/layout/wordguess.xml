@@ -65,7 +65,7 @@
 
   <TextView
     android:id="@+id/correctView"
-    android:layout_below="@id/anagramInput"
+    android:layout_below="@id/wordguessInput"
     android:layout_width="120dp"
     android:layout_height="50dp"
     android:layout_marginTop="60dp"
@@ -79,7 +79,7 @@
     />
   <Button
     android:id="@+id/nextBtn"
-    android:layout_below="@id/anagramInput"
+    android:layout_below="@id/wordguessInput"
     android:layout_marginHorizontal="282dp"
     android:layout_marginTop="100dp"
     android:layout_width="90dp"
@@ -89,7 +89,7 @@
 
   <TextView
     android:id="@+id/currentGame"
-    android:layout_below="@id/anagramInput"
+    android:layout_below="@id/wordguessInput"
     android:layout_marginHorizontal="210dp"
     android:layout_marginTop="29dp"
     android:layout_width="170dp"

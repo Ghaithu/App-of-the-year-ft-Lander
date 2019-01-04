@@ -13,4 +13,5 @@
   <string name="answerHint">Answer</string>
   <string name="anagramQuestion">Solve the anagram to advance to the next stage!</string>
   <string name="nextAna">next</string>
+  <string name="nameRS">Runescape</string>
 </resources>
