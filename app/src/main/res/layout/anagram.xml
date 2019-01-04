@@ -59,6 +59,8 @@
     android:layout_height="50dp"
     android:background="@android:color/darker_gray"
     android:hint="@string/answerHint"
+    android:imeOptions="actionDone"
+    android:singleLine="true"
     />
 
   <TextView

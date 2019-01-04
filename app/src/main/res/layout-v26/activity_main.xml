@@ -21,6 +21,8 @@
     android:importantForAutofill="no"
     android:inputType="textPersonName"
     android:labelFor="@+id/start"
+    android:imeOptions="actionDone"
+    android:singleLine="true"
  />
 
   <TextView
@@ -57,6 +59,8 @@
     android:background="@android:color/darker_gray"
     android:ems="10"
     android:hint="@string/hintAge"
+    android:imeOptions="actionDone"
+    android:singleLine="true"
 
     android:inputType="number" />
 
