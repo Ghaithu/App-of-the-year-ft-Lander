@@ -13,7 +13,7 @@ public class Wordguess {
 
     public boolean Check(String juistWoord){
         boolean isJuist = false;
-        if(woord == juistWoord){
+        if(woord.equals(juistWoord)){
             isJuist = true;
         }
         return isJuist;
