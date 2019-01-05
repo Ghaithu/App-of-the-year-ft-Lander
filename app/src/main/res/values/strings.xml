@@ -18,4 +18,5 @@
   <string name="gameGuess">word guess</string>
   <string name="gameAna">Anagram</string>
   <string name="hangmanDesc">Guess the letters before it\'s too late!</string>
+  <string name="backBtn">back</string>
 </resources>
