@@ -47,6 +47,7 @@ public class ChooseWordguess extends AppCompatActivity {
         }
 
         Next();
+        Back();
     }
 
     public void Next(){
@@ -60,6 +61,16 @@ public class ChooseWordguess extends AppCompatActivity {
                 }else{
                     Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
                 }
+            }
+        });
+    }
+
+    public void Back(){
+        Button startButton = findViewById(R.id.backBtn);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseWordguess.this, menu.class));
             }
         });
     }
