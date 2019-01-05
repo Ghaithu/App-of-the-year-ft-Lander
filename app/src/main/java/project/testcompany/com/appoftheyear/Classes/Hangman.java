@@ -20,7 +20,7 @@ public class Hangman {
 
         if(woord.contains(letter)){
             isJuist = true;
-            teller = letter.indexOf(letter);
+            teller = woord.indexOf(letter);
         }else{
             isJuist = false;
         }

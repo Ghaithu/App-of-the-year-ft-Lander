@@ -20,7 +20,8 @@ public class ChooseHangman extends AppCompatActivity {
 
     private Hangman hangman;
     private int random = new Random().nextInt(7);
-    private Wordlist wordlist;
+    private int aantWrong = 0;
+    private Wordlist wordlist = new Wordlist();
     private EditText letterInput;
     private ImageView h1;
     private ImageView h2;
@@ -89,6 +90,8 @@ public class ChooseHangman extends AppCompatActivity {
                     setLetter(hangman.teller,antwoord);
                 }else{
                     Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
+                    Wrong(aantWrong);
+                    aantWrong++;
                 }
             }
         });
@@ -96,35 +99,36 @@ public class ChooseHangman extends AppCompatActivity {
 
     public void setLetter(int l, String c){
         switch (l) {
-            case 1:
+            case 0:
                 t1.setText(c);
                 break;
-            case 2:
+            case 1:
                 t2.setText(c);
                 break;
-            case 3:
+            case 2:
                 t3.setText(c);
                 break;
-            case 4:
+            case 3:
                 t4.setText(c);
                 break;
-            case 5:
+            case 4:
                 t5.setText(c);
                 break;
-            case 6:
+            case 5:
                 t6.setText(c);
                 break;
-            case 7:
+            case 6:
                 t7.setText(c);
                 break;
-            case 8:
+            case 7:
                 t8.setText(c);
                 break;
-            case 9:
+            case 8:
                 t9.setText(c);
                 break;
         }
     }
+
     public void SetHangman(String game){
         if(game.equals("runescape")){
             hangman = new Hangman(wordlist.GetRunescape(random));
@@ -149,7 +153,27 @@ public class ChooseHangman extends AppCompatActivity {
 
     }
 
-    public void Wrong(int letterId){
-
+    public void Wrong(int l){
+        switch (l) {
+            case 0:
+                h1.setVisibility(View.VISIBLE);
+                break;
+            case 1:
+                h2.setVisibility(View.VISIBLE);
+                break;
+            case 2:
+                h3.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                h4.setVisibility(View.VISIBLE);
+                break;
+            case 4:
+                h5.setVisibility(View.VISIBLE);
+                break;
+            case 5:
+                Reset();
+                Toast toast = Toast.makeText(getApplicationContext(), "Game Over", Toast.LENGTH_SHORT); toast.show();
+                break;
+        }
     }
 }
