@@ -38,16 +38,6 @@ public class ChooseAnagram extends AppCompatActivity {
 
         String gametype = getIntent().getStringExtra("Game");
 
-        /*if(gametype.equals("runescape")){
-            anagram = new Anagram(wordlist.GetRunescape(random));
-        }
-        if(gametype.equals("overwatch")){
-            anagram = new Anagram(wordlist.GetOverwatch(random));
-        }
-        if(gametype.equals("csgo")){
-            anagram = new Anagram(wordlist.GetCsgo(random));
-        }*/
-
         SetAnagram(gametype);
         Next(gametype);
         Back();

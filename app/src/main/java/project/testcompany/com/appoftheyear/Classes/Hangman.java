@@ -6,6 +6,7 @@ public class Hangman {
 
     private String woord;
     private String[] woordOplossing;
+    public int teller;
 
     public Hangman(String woord) {
         this.woord = woord;
@@ -16,12 +17,22 @@ public class Hangman {
 
     public boolean CheckLetter(String letter){
         boolean isJuist = false;
-        for(int i = 0; i < woord.length(); i++){
-            if(letter == woord.substring(i)){
+
+        if(woord.contains(letter)){
+            isJuist = true;
+            teller = letter.indexOf(letter);
+        }else{
+            isJuist = false;
+        }
+
+        /*for(int i = 0; i < woord.length(); i++){
+            if(letter.equals(woord.substring(i))){
                 woordOplossing[i] = letter;
+                teller = i;
                 isJuist = true;
             }
-        }
+        }*/
+
         return isJuist;
     }
 
