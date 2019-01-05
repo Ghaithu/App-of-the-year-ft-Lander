@@ -36,10 +36,131 @@
     android:id="@+id/hangmanDescription"
     android:layout_centerHorizontal="true"
     android:layout_below="@id/gameTitle"
-    android:text="Schrijf hier aantal letters die moeten gegeussed worden "
-    android:textSize="22sp"
+    android:text="@string/hangmanRules"
+    android:textSize="18sp"
     android:layout_width="300dp"
-    android:layout_height="60dp" />
+    android:layout_height="60dp"
+    android:background="#000"/>
+
+  <TextView
+    android:id="@+id/Letter1"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+
+    />
+  <TextView
+    android:id="@+id/Letter2"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="80dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+
+
+    />
+  <TextView
+    android:id="@+id/Letter3"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="110dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+    />
+  <TextView
+    android:id="@+id/Letter4"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="140dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+    />
+  <TextView
+    android:id="@+id/Letter5"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="170dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+    />
+  <TextView
+    android:id="@+id/Letter6"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="200dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+    />
+  <TextView
+    android:id="@+id/Letter7"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="230dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+    />
+  <TextView
+    android:id="@+id/Letter8"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="260dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+    />
+  <TextView
+    android:id="@+id/Letter9"
+    android:background="#FFFF"
+    android:layout_height="30dp"
+    android:layout_width="18dp"
+    android:layout_below="@id/gameTitle"
+    android:layout_marginLeft="290dp"
+    android:layout_marginTop="25dp"
+    android:text=""
+    android:textColor="#000"
+    android:textSize="20dp"
+
+    />
+
 
   <!--<TextView-->
     <!--android:id="@+id/hangmanBox"-->
@@ -141,6 +262,7 @@
     android:layout_width="120dp"
     android:layout_height="50dp"
     android:layout_marginTop="60dp"
+    android:textSize="22sp"
     />
   <TextView
     android:id="@+id/wrongView"
@@ -149,6 +271,8 @@
     android:layout_width="80dp"
     android:layout_height="50dp"
     android:layout_marginTop="10dp"
+    android:textSize="22sp"
+
     />
   <Button
     android:id="@+id/nextBtn"
