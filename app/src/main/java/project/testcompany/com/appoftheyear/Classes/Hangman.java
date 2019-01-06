@@ -18,20 +18,12 @@ public class Hangman {
     public boolean CheckLetter(String letter){
         boolean isJuist = false;
 
-        if(woord.contains(letter)){
+        if(woord.isEmpty()){
+            isJuist = false;
+        }else if (woord.contains(letter)){
             isJuist = true;
             teller = woord.indexOf(letter);
-        }else{
-            isJuist = false;
         }
-
-        /*for(int i = 0; i < woord.length(); i++){
-            if(letter.equals(woord.substring(i))){
-                woordOplossing[i] = letter;
-                teller = i;
-                isJuist = true;
-            }
-        }*/
 
         return isJuist;
     }

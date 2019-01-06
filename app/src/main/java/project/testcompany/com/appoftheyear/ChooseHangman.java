@@ -96,11 +96,10 @@ public class ChooseHangman extends AppCompatActivity {
                 String antwoord = letterInput.getText().toString();
                 if(antwoord.length() > 1){
                     Toast toast = Toast.makeText(getApplicationContext(), "You need to enter one letter", Toast.LENGTH_SHORT); toast.show();
-
                 }else{
                     if(hangman.CheckLetter(antwoord)){
                         Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
-                        setLetter(hangman.teller,antwoord);
+                        setLetter(hangman.teller - 1,antwoord);
                         Correct(aantJuist);
                         aantJuist++;
                     }else{
