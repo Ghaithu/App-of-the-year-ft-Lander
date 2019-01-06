@@ -18,7 +18,7 @@ public class Hangman {
     public boolean CheckLetter(String letter){
         boolean isJuist = false;
 
-        if(woord.isEmpty()){
+        if(letter.isEmpty()){
             isJuist = false;
         }else if (woord.contains(letter)){
             isJuist = true;
