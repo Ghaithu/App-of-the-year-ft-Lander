@@ -86,16 +86,22 @@ public class ChooseHangman extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String antwoord = letterInput.getText().toString();
-                if(hangman.CheckLetter(antwoord)){
-                    Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
-                    setLetter(hangman.teller,antwoord);
-                    Correct(aantJuist);
-                    aantJuist++;
+                if(antwoord.length() > 1){
+                    Toast toast = Toast.makeText(getApplicationContext(), "You need to enter one letter", Toast.LENGTH_SHORT); toast.show();
+
                 }else{
-                    Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
-                    Wrong(aantWrong);
-                    aantWrong++;
+                    if(hangman.CheckLetter(antwoord)){
+                        Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
+                        setLetter(hangman.teller,antwoord);
+                        Correct(aantJuist);
+                        aantJuist++;
+                    }else{
+                        Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
+                        Wrong(aantWrong);
+                        aantWrong++;
+                    }
                 }
+                letterInput.setText("");
             }
         });
     }

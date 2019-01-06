@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class menu extends AppCompatActivity {
 
@@ -36,20 +37,24 @@ public class menu extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mode.equals("anagram")){
-                    Intent intent = new Intent(menu.this, ChooseAnagram.class);
-                    intent.putExtra("Game", game);
-                    startActivity(intent);
-                }
-                if(mode.equals("wordguess")){
-                    Intent intent = new Intent(menu.this, ChooseWordguess.class);
-                    intent.putExtra("Game", game);
-                    startActivity(intent);
-                }
-                if(mode.equals("hangman")){
-                    Intent intent = new Intent(menu.this, ChooseHangman.class);
-                    intent.putExtra("Game", game);
-                    startActivity(intent);
+                if(mode == null || game == null){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Please Select a mode and game", Toast.LENGTH_SHORT); toast.show();
+                }else{
+                    if(mode.equals("anagram")){
+                        Intent intent = new Intent(menu.this, ChooseAnagram.class);
+                        intent.putExtra("Game", game);
+                        startActivity(intent);
+                    }
+                    if(mode.equals("wordguess")){
+                        Intent intent = new Intent(menu.this, ChooseWordguess.class);
+                        intent.putExtra("Game", game);
+                        startActivity(intent);
+                    }
+                    if(mode.equals("hangman")){
+                        Intent intent = new Intent(menu.this, ChooseHangman.class);
+                        intent.putExtra("Game", game);
+                        startActivity(intent);
+                    }
                 }
             }
         });
