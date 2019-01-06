@@ -19,8 +19,13 @@ public class ChooseWordguess extends AppCompatActivity {
 
     private Wordlist wordlist = new Wordlist();
     private Wordguess wordguess;
+    private TextView correctView;
+    private TextView wrongView;
     private TextView wordguessBox;
     private EditText wordguessInput;
+    private String gametype;
+    private int correct = 0;
+    private int wrong = 0;
     private int random = new Random().nextInt(7);
 
     @Override
@@ -30,24 +35,34 @@ public class ChooseWordguess extends AppCompatActivity {
 
         wordguessBox = findViewById(R.id.descriptionBox);
         wordguessInput = findViewById(R.id.wordguessInput);
+        correctView = findViewById(R.id.correctView);
+        wrongView = findViewById(R.id.wrongView);
 
-        String gametype = getIntent().getStringExtra("Game");
+        gametype = getIntent().getStringExtra("Game");
 
-        if(gametype.equals("runescape")){
+        SetWordguess(gametype);
+
+        Next();
+        Back();
+    }
+
+    public void SetWordguess(String game){
+        if(game.equals("runescape")){
             wordguessBox.setText(wordlist.GetRunescapeDisc(random));
             wordguess = new Wordguess(wordlist.GetRunescape(random));
         }
-        if(gametype.equals("overwatch")){
+        if(game.equals("overwatch")){
             wordguessBox.setText(wordlist.GetOverwatchDisc(random));
             wordguess = new Wordguess(wordlist.GetOverwatch(random));
         }
-        if(gametype.equals("csgo")){
+        if(game.equals("csgo")){
             wordguessBox.setText(wordlist.GetCsgoDisc(random));
             wordguess = new Wordguess(wordlist.GetCsgo(random));
         }
 
-        Next();
-        Back();
+        correctView.setText(String.valueOf(correct));
+        wrongView.setText(String.valueOf(wrong));
+        wordguessInput.setText("");
     }
 
     public void Next(){
@@ -58,9 +73,13 @@ public class ChooseWordguess extends AppCompatActivity {
                 String antwoord = wordguessInput.getText().toString();
                 if(wordguess.Check(antwoord)){
                     Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
+                    correct++;
                 }else{
                     Toast toast = Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT); toast.show();
+                    wrong++;
                 }
+                random = new Random().nextInt(7);
+                SetWordguess(gametype);
             }
         });
     }

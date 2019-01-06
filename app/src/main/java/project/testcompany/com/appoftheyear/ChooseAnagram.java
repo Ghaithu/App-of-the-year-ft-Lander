@@ -74,6 +74,7 @@ public class ChooseAnagram extends AppCompatActivity {
         anagrambox.setText(anagram.GenerateAnagram());
         correctView.setText(String.valueOf(correct));
         wrongView.setText(String.valueOf(wrong));
+        anagramAnswer.setText("");
     }
 
     public void Back(){

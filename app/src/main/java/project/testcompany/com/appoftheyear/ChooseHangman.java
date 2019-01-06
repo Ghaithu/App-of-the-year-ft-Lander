@@ -19,6 +19,7 @@ import project.testcompany.com.appoftheyear.Classes.Wordlist;
 public class ChooseHangman extends AppCompatActivity {
 
     private Hangman hangman;
+    private TextView hangmanhint;
     private int random = new Random().nextInt(7);
     private int aantWrong = 0;
     private int aantJuist = 0;
@@ -44,7 +45,7 @@ public class ChooseHangman extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hangman);
-
+        hangmanhint = findViewById(R.id.hangmanHint);
         letterInput = findViewById(R.id.hangmanInput);
         h1 = findViewById(R.id.hangmanFirst);
         h2 = findViewById(R.id.hangmanSecond);
@@ -141,12 +142,16 @@ public class ChooseHangman extends AppCompatActivity {
     public void SetHangman(String game){
         if(game.equals("runescape")){
             hangman = new Hangman(wordlist.GetRunescape(random));
+            hangmanhint.setText(wordlist.GetRunescapeDisc(random));
+
         }
         if(game.equals("overwatch")){
             hangman = new Hangman(wordlist.GetOverwatch(random));
+            hangmanhint.setText(wordlist.GetOverwatchDisc(random));
         }
         if(game.equals("csgo")){
             hangman = new Hangman(wordlist.GetCsgo(random));
+            hangmanhint.setText(wordlist.GetCsgoDisc(random));
         }
     }
 
