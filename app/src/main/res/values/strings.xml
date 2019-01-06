@@ -20,4 +20,5 @@
   <string name="hangmanDesc">Guess the letters before it\'s too late!</string>
   <string name="backBtn">back</string>
   <string name="hangmanRules">Raad het juiste woord before its late!</string>
+  <string name="welcomeText">Welcome to Zalirin, after pressing Start, choose your game mode and preferd game to start the quiz!</string>
 </resources>

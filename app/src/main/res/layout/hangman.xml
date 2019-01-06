@@ -54,8 +54,8 @@
     android:textColor="#000"
     android:textSize="20dp"
 
-
     />
+
   <TextView
     android:id="@+id/Letter2"
     android:background="#FFFF"
@@ -68,9 +68,9 @@
     android:textColor="#000"
     android:textSize="20dp"
 
-
-
     />
+
+
   <TextView
     android:id="@+id/Letter3"
     android:background="#FFFF"
@@ -162,17 +162,6 @@
     />
 
 
-  <!--<TextView-->
-    <!--android:id="@+id/hangmanBox"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_below="@id/hangmanDescription"-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="210dp"-->
-    <!--android:background="#FF091238"-->
-    <!---->
-
-
-    <!--/>-->
 
   <ImageView
     android:id="@+id/hangmanView"

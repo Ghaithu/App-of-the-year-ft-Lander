@@ -8,25 +8,8 @@
   android:background="@drawable/page1"
   tools:context=".MainActivity">
 
-  <EditText
-    android:layout_below="@id/textView"
-    android:layout_centerHorizontal="true"
-    android:layout_width="170dp"
-    android:layout_height="50dp"
-    android:layout_marginTop="20dp"
-    android:id="@+id/nameInput"
-    android:background="@android:color/darker_gray"
-    android:ems="10"
-    android:hint="@string/hintName"
-    android:importantForAutofill="no"
-    android:inputType="textPersonName"
-    android:labelFor="@+id/start"
-    android:imeOptions="actionDone"
-    android:singleLine="true"
- />
-
   <TextView
-    android:id="@+id/textView"
+    android:id="@+id/gameTitle"
     android:layout_width="353dp"
     android:layout_height="125dp"
     android:layout_alignParentStart="true"
@@ -48,25 +31,24 @@
     android:textStyle="normal|bold"
     app:autoSizeTextType="none" />
 
-  <EditText
-    android:id="@+id/ageInput"
-    android:layout_centerHorizontal="true"
-    android:layout_below="@id/nameInput"
-    android:layout_height="50dp"
-    android:layout_width="170dp"
-    android:layout_marginTop="20dp"
-    android:autofillHints=""
-    android:background="@android:color/darker_gray"
-    android:ems="10"
-    android:hint="@string/hintAge"
-    android:imeOptions="actionDone"
-    android:singleLine="true"
+  <TextView
+    android:layout_marginLeft="80dp"
+    android:id="@+id/Welcome"
+    android:fontFamily="monospace"
+    android:textStyle="bold"
+    android:layout_below="@id/gameTitle"
 
-    android:inputType="number" />
+    android:textSize="22sp"
+    android:layout_width="300dp"
+    android:layout_height="170dp"
+    android:text="@string/welcomeText"
 
+
+
+    />
   <Button
     android:id="@+id/start"
-    android:layout_below="@id/ageInput"
+    android:layout_below="@id/Welcome"
     android:layout_centerHorizontal="true"
     android:layout_width="200dp"
     android:layout_height="50dp"
