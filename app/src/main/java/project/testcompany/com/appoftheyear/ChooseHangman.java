@@ -20,6 +20,8 @@ public class ChooseHangman extends AppCompatActivity {
 
     private Hangman hangman;
     private TextView hangmanhint;
+    private int correct = 0;
+    private int wrong = 0;
     private int random = new Random().nextInt(7);
     private int aantWrong = 0;
     private int aantJuist = 0;
@@ -40,6 +42,8 @@ public class ChooseHangman extends AppCompatActivity {
     private TextView t7;
     private TextView t8;
     private TextView t9;
+    private TextView correctView;
+    private TextView wrongView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,9 @@ public class ChooseHangman extends AppCompatActivity {
         setContentView(R.layout.hangman);
         hangmanhint = findViewById(R.id.hangmanHint);
         letterInput = findViewById(R.id.hangmanInput);
+        correctView = findViewById(R.id.correctView);
+        wrongView = findViewById(R.id.wrongView);
+
         h1 = findViewById(R.id.hangmanFirst);
         h2 = findViewById(R.id.hangmanSecond);
         h3 = findViewById(R.id.hangmanThird);
@@ -153,6 +160,8 @@ public class ChooseHangman extends AppCompatActivity {
             hangman = new Hangman(wordlist.GetCsgo(random));
             hangmanhint.setText(wordlist.GetCsgoDisc(random));
         }
+        correctView.setText(String.valueOf(correct));
+        wrongView.setText(String.valueOf(wrong));
     }
 
     public void Reset(){
@@ -171,14 +180,20 @@ public class ChooseHangman extends AppCompatActivity {
         t7.setText("");
         t8.setText("");
         t9.setText("");
+
+        aantWrong = 0;
+        aantJuist = 0;
     }
 
     public void Correct(int letterId){
-        if(letterId >= hangman.getWoord().length() - 1){
+        if(letterId >= hangman.getWoord().length()){
             Reset();
+            random = new Random().nextInt(7);
+            hangmanhint.setText("");
             SetHangman(gametype);
             aantWrong = 0;
             Toast toast = Toast.makeText(getApplicationContext(), "You Won!", Toast.LENGTH_SHORT); toast.show();
+            correct++;
         }
     }
 
@@ -201,6 +216,8 @@ public class ChooseHangman extends AppCompatActivity {
                 break;
             case 5:
                 Reset();
+                hangmanhint.setText("");
+                wrong++;
                 SetHangman(gametype);
                 aantWrong = 0;
                 Toast toast = Toast.makeText(getApplicationContext(), "Game Over", Toast.LENGTH_SHORT); toast.show();
