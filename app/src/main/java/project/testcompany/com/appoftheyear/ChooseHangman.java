@@ -99,10 +99,7 @@ public class ChooseHangman extends AppCompatActivity {
                 }else{
                     if(hangman.CheckLetter(antwoord)){
                         Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
-                        for(int i = 0; i < hangman.aantLetters; i++){
-                            setLetter(hangman.teller,antwoord);
-                        }
-                        //setLetter(hangman.teller,antwoord);
+                        setLetter(hangman.teller,antwoord);
                         Correct(aantJuist);
                         aantJuist++;
                     }else{
