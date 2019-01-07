@@ -179,17 +179,16 @@ public class ChooseHangman extends AppCompatActivity {
         t7.setText("");
         t8.setText("");
         t9.setText("");
-<<<<<<< HEAD
 
 
 
 
 
-=======
+
         hangmanhint.setText("");
         SetHangman(gametype);
         random = new Random().nextInt(7);
->>>>>>> 5e547820e421430b279ac69b63642967fd771a27
+
 
         aantWrong = 0;
         aantJuist = 0;
