@@ -61,27 +61,29 @@
     android:hint="@string/answerHint"
     android:imeOptions="actionDone"
     android:singleLine="true"
+    android:inputType="textCapWords"
     />
 
   <TextView
     android:id="@+id/correctView"
-    android:layout_below="@id/anagramInput"
     android:layout_width="120dp"
     android:layout_height="50dp"
+    android:layout_below="@id/anagramInput"
     android:layout_marginTop="0dp"
-    android:textSize="22sp"
+    android:textColor="@color/colorPrimary"
 
 
-    />
+    android:textSize="22sp" />
+
   <TextView
     android:id="@+id/wrongView"
-    android:layout_below="@id/correctView"
     android:layout_width="120dp"
     android:layout_height="50dp"
+    android:layout_below="@id/correctView"
     android:layout_marginTop="10dp"
-    android:textSize="22sp"
+    android:textColor="@color/colorAccent"
 
-    />
+    android:textSize="22sp" />
 <Button
   android:id="@+id/nextBtn"
   android:layout_below="@id/anagramInput"
