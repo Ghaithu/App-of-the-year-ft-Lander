@@ -22,7 +22,7 @@ public class ChooseHangman extends AppCompatActivity {
     private TextView hangmanhint;
     private int correct = 0;
     private int wrong = 0;
-    private int random = new Random().nextInt(7);
+    private int random;
     private int aantWrong = 0;
     private int aantJuist = 0;
     private Wordlist wordlist = new Wordlist();
@@ -72,7 +72,6 @@ public class ChooseHangman extends AppCompatActivity {
 
         gametype = getIntent().getStringExtra("Game");
 
-        SetHangman(gametype);
         Reset();
         Back();
         Next();
@@ -99,10 +98,7 @@ public class ChooseHangman extends AppCompatActivity {
                 }else{
                     if(hangman.CheckLetter(antwoord)){
                         Toast toast = Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT); toast.show();
-                        for(int i = 0; i < hangman.aantLetters; i++){
-                            setLetter(hangman.teller,antwoord);
-                        }
-                        //setLetter(hangman.teller,antwoord);
+                        setLetter(hangman.teller,antwoord);
                         Correct(aantJuist);
                         aantJuist++;
                     }else{
@@ -120,7 +116,6 @@ public class ChooseHangman extends AppCompatActivity {
         switch (l) {
             case 0:
                 t1.setText(c);
-
                 break;
             case 1:
                 t2.setText(c);
@@ -165,46 +160,6 @@ public class ChooseHangman extends AppCompatActivity {
         }
         correctView.setText(String.valueOf(correct));
         wrongView.setText(String.valueOf(wrong));
-        Reset();
-        for(int i = 0; i < hangman.getWoord().length(); i++){
-          switch(i)
-          {
-            case 0:
-              t1.setVisibility(View.VISIBLE);
-              break;
-            case 1:
-              t2.setVisibility(View.VISIBLE);
-              break;
-            case 2:
-              t3.setVisibility(View.VISIBLE);
-              break;
-            case 3:
-              t4.setVisibility(View.VISIBLE);
-              break;
-            case 4:
-              t5.setVisibility(View.VISIBLE);
-              break;
-            case 5:
-              t6.setVisibility(View.VISIBLE);
-              break;
-            case 6:
-              t7.setVisibility(View.VISIBLE);
-              break;
-            case 7:
-              t8.setVisibility(View.VISIBLE);
-              break;
-            case 8:
-              t9.setVisibility(View.VISIBLE);
-              break;
-
-
-
-
-
-          }
-        }
-
-
     }
 
 
@@ -224,11 +179,17 @@ public class ChooseHangman extends AppCompatActivity {
         t7.setText("");
         t8.setText("");
         t9.setText("");
+<<<<<<< HEAD
 
 
 
 
 
+=======
+        hangmanhint.setText("");
+        SetHangman(gametype);
+        random = new Random().nextInt(7);
+>>>>>>> 5e547820e421430b279ac69b63642967fd771a27
 
         aantWrong = 0;
         aantJuist = 0;
@@ -237,10 +198,6 @@ public class ChooseHangman extends AppCompatActivity {
     public void Correct(int letterId){
         if(letterId >= hangman.getWoord().length()){
             Reset();
-            random = new Random().nextInt(7);
-            hangmanhint.setText("");
-            SetHangman(gametype);
-            aantWrong = 0;
             Toast toast = Toast.makeText(getApplicationContext(), "You Won!", Toast.LENGTH_SHORT); toast.show();
             correct++;
         }
@@ -265,9 +222,7 @@ public class ChooseHangman extends AppCompatActivity {
                 break;
             case 5:
                 Reset();
-                hangmanhint.setText("");
                 wrong++;
-                SetHangman(gametype);
                 aantWrong = 0;
                 Toast toast = Toast.makeText(getApplicationContext(), "Game Over", Toast.LENGTH_SHORT); toast.show();
                 break;
