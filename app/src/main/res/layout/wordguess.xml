@@ -71,7 +71,7 @@
     android:layout_below="@id/wordguessInput"
     android:layout_marginTop="0dp"
     android:textColor="@color/colorPrimary"
-    
+
 
 
     android:textSize="22sp" />
