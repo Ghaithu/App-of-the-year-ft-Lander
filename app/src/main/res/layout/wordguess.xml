@@ -61,6 +61,7 @@
     android:hint="@string/answerHint"
     android:imeOptions="actionDone"
     android:singleLine="true"
+    android:inputType="textCapSentences"
     />
 
   <TextView
