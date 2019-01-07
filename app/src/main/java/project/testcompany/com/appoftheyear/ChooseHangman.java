@@ -225,15 +225,7 @@ public class ChooseHangman extends AppCompatActivity {
         t8.setText("");
         t9.setText("");
 
-      t1.setVisibility(View.INVISIBLE);
-      t2.setVisibility(View.INVISIBLE);
-      t3.setVisibility(View.INVISIBLE);
-      t4.setVisibility(View.INVISIBLE);
-      t5.setVisibility(View.INVISIBLE);
-      t6.setVisibility(View.INVISIBLE);
-      t7.setVisibility(View.INVISIBLE);
-      t8.setVisibility(View.INVISIBLE);
-      t9.setVisibility(View.INVISIBLE);
+
 
 
 

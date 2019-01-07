@@ -22,4 +22,6 @@
   <string name="hangmanRules">Raad het juiste woord before its late!</string>
   <string name="welcomeText">Welcome to Zalirin, after pressing Start, choose your game mode and preferd game to start the quiz!</string>
   <string name="picBtn">Take pic</string>
+  <string name="hinting">Hint:</string>
+  <string name="todotxt">TODO</string>
 </resources>
