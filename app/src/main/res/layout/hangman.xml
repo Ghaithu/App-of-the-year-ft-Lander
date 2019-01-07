@@ -180,13 +180,14 @@
 
   <ImageView
     android:id="@+id/hangmanFirst"
-    android:layout_height="400px"
+    android:layout_height="460px"
     android:layout_width="300dp"
-    android:layout_marginRight="260dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginRight="240dp"
+    android:layout_above="@id/hangmanHint"
+    android:layout_marginBottom="22dp"
     android:layout_below="@id/hangmanDescription"
     android:layout_centerVertical="true"
-    android:src="@drawable/linevert"
+    android:src="@drawable/firstvert"
     />
 
   <ImageView
@@ -203,20 +204,20 @@
 
   <ImageView
     android:id="@+id/hangmanThird"
-    android:layout_height="105dp"
+    android:layout_height="115dp"
     android:layout_width="300dp"
     android:layout_marginLeft="25dp"
     android:layout_marginTop="4dp"
     android:layout_below="@id/hangmanDescription"
     android:layout_centerVertical="true"
-    android:src="@drawable/linevert"
+    android:src="@drawable/firstvert"
     />
 
   <ImageView
     android:id="@+id/hangmanForth"
     android:layout_height="105dp"
     android:layout_width="60dp"
-    android:layout_marginLeft="165dp"
+    android:layout_marginLeft="175dp"
     android:layout_marginTop="50dp"
     android:layout_below="@id/hangmanDescription"
     android:layout_centerVertical="true"
@@ -227,7 +228,7 @@
     android:id="@+id/hangmanFifth"
     android:layout_height="105dp"
     android:layout_width="60dp"
-    android:layout_marginLeft="165dp"
+    android:layout_marginLeft="175dp"
     android:layout_marginTop="1dp"
     android:layout_below="@id/hangmanDescription"
     android:layout_centerVertical="true"

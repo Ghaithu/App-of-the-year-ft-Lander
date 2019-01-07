@@ -120,6 +120,7 @@ public class ChooseHangman extends AppCompatActivity {
         switch (l) {
             case 0:
                 t1.setText(c);
+
                 break;
             case 1:
                 t2.setText(c);
@@ -164,7 +165,48 @@ public class ChooseHangman extends AppCompatActivity {
         }
         correctView.setText(String.valueOf(correct));
         wrongView.setText(String.valueOf(wrong));
+        Reset();
+        for(int i = 0; i < hangman.getWoord().length(); i++){
+          switch(i)
+          {
+            case 0:
+              t1.setVisibility(View.VISIBLE);
+              break;
+            case 1:
+              t2.setVisibility(View.VISIBLE);
+              break;
+            case 2:
+              t3.setVisibility(View.VISIBLE);
+              break;
+            case 3:
+              t4.setVisibility(View.VISIBLE);
+              break;
+            case 4:
+              t5.setVisibility(View.VISIBLE);
+              break;
+            case 5:
+              t6.setVisibility(View.VISIBLE);
+              break;
+            case 6:
+              t7.setVisibility(View.VISIBLE);
+              break;
+            case 7:
+              t8.setVisibility(View.VISIBLE);
+              break;
+            case 8:
+              t9.setVisibility(View.VISIBLE);
+              break;
+
+
+
+
+
+          }
+        }
+
+
     }
+
 
     public void Reset(){
         h1.setVisibility(View.INVISIBLE);
@@ -182,6 +224,19 @@ public class ChooseHangman extends AppCompatActivity {
         t7.setText("");
         t8.setText("");
         t9.setText("");
+
+      t1.setVisibility(View.INVISIBLE);
+      t2.setVisibility(View.INVISIBLE);
+      t3.setVisibility(View.INVISIBLE);
+      t4.setVisibility(View.INVISIBLE);
+      t5.setVisibility(View.INVISIBLE);
+      t6.setVisibility(View.INVISIBLE);
+      t7.setVisibility(View.INVISIBLE);
+      t8.setVisibility(View.INVISIBLE);
+      t9.setVisibility(View.INVISIBLE);
+
+
+
 
         aantWrong = 0;
         aantJuist = 0;
